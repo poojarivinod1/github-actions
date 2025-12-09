@@ -9,7 +9,7 @@ concurrency:
 jobs: # pipeline. One workflow will have multiple pipeline
   hello: # job name 
     runs-on: ubuntu-latest # where to run # linux os
-    steps: # like stages in jenkin
+    steps: # like stages in jenkins
       - name: step-1
         run: sleep 20
       
