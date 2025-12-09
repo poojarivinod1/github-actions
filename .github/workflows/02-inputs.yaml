@@ -1,0 +1,36 @@
+# search in google as "github actions" --> Get started with actions --> Reference --> workflows and actions --> workflows syntax --> Example of on.workflow_dispatch.inputs
+name: Inputs
+# When to trigger this pipeline. We can trigger on push or manual or someother events like creating PR, updating PR, creating branches, creating issues. 
+on: 
+  workflow_dispatch: # we have to trigger it manually
+jobs: # pipeline. One workflow will have multiple pipeline
+   inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      print_tags:
+        description: 'True to print to STDOUT'
+        required: true
+        type: boolean
+      tags:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+jobs:
+  print-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print the input tag to STDOUT
+      run: echo  The tags are ${{ inputs.tags }}
+    - name: Print the environment
+      run: echo  The tags are ${{ inputs.environment }} 

@@ -1,3 +1,4 @@
+# search in google as "github actions" --> Get started with actions --> concepts --> workflows and actions --> workflows --> scroll down --> click on "creating on example workflow" 
 name: HelloWorld
 # When to trigger this pipeline. We can trigger on push or manual or someother events like creating PR, updating PR, creating branches, creating issues. 
 on: [push] # anybody push in this, it will trigger
