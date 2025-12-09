@@ -1,0 +1,20 @@
+name: parallel
+# When to trigger this pipeline. We can trigger on push or manual or someother events like creating PR, updating PR, creating branches, creating issues. 
+on: [push] # anybody push in this, it will trigger
+jobs: # pipeline. One workflow will have multiple pipeline
+  job-1: # name of the job
+    runs-on: ubuntu-latest # where to run # linux os
+    steps: # like stages in jenkins
+      - name: step-1
+        run: echo "Hii, I am from job-1"
+  job-2: # name of the job
+    runs-on: ubuntu-latest # where to run # linux os
+    steps: # like stages in jenkins
+      - name: step-1
+        run: echo "Hii, I am from job-2"
+  job-3: # name of the job
+    runs-on: ubuntu-latest # where to run # linux os
+    steps: # like stages in jenkins
+      - name: step-1
+        run: echo "Hii, I am from job-3"
+      
