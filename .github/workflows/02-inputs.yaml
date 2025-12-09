@@ -3,8 +3,7 @@ name: Inputs
 # When to trigger this pipeline. We can trigger on push or manual or someother events like creating PR, updating PR, creating branches, creating issues. 
 on: 
   workflow_dispatch: # we have to trigger it manually
-jobs: # pipeline. One workflow will have multiple pipeline
-   inputs:
+    inputs:
       logLevel:
         description: 'Log level'
         required: true
