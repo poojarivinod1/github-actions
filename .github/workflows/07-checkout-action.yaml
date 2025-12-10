@@ -11,6 +11,6 @@ jobs: # pipeline. One workflow will have multiple pipeline
         uses: actions/checkout@v6
 
       - name: display the files
-        uses: ls -la
+        run: ls -la
 
  
