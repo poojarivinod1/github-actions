@@ -7,6 +7,6 @@ jobs: # pipeline. One workflow will have multiple pipeline
     runs-on: ubuntu-latest # where to run # linux os
     steps: # like stages in jenkins
       - name: step-1
-        run: echo "Hello World"
+        run: echo "Hello World from vinod"
       - name: step-2
         run: echo "Hello GitHub Action"
